@@ -1,0 +1,123 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    background-color: #ff69b4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#cityForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#cityInput {
+    padding: 10px;
+    font-size: 1em;
+    width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+#cityInput:focus {
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #000000; /* Black background */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #555555; /* Dark gray background on hover */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.forecast-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#hourly-forecast-container {
+    width: 100%;
+    overflow: hidden; /* Hide horizontal scrollbar */
+}
+
+.forecast-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.hourly-forecast {
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.daily-forecast {
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.hourly-forecast p, .daily-forecast p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #cityInput {
+        width: 100%;
+    }
+    .hourly-forecast, .daily-forecast {
+        width: calc(100% - 40px);
+        margin-right: 0;
+    }
+}
